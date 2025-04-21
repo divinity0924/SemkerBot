@@ -7,11 +7,11 @@ from dotenv import load_dotenv
 
 class HomeAssistant:
     def __init__(self):
-        load_dotenv()
+        load_dotenv(r'C:\Users\knguyen2\azure.env')
 
-        base_url = os.getenv("AZURE_OPENAI_BASE_URL")
-        api_key = os.getenv("AZURE_OPENAI_API_KEY")
-        deployment_name = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT_NAME")
+        base_url = os.getenv("AZURE_OPENAI_ENDPOINT")
+        api_key = os.getenv("AZURE_OPENAI_KEY")
+        deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT")
 
         self.kernel = Kernel()
         self.kernel.add_service(
